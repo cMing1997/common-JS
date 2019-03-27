@@ -1,0 +1,130 @@
+.reception-content {
+    background-color: #fffeec;
+    width: 14.14rem;
+    margin: .4rem auto 0px;
+}
+
+.reception-content .reception-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7.3rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.reception-content .reception-img a {
+    width: 95%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateY(0.2rem);
+}
+
+.reception-content .reception-img a img {
+    width: 100%;
+}
+
+.reception-content .reception-img em {
+    position: absolute;
+    bottom: -.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.702;
+    font-size: .88rem;
+    font-family: "Microsoft YaHei";
+    color: white;
+    line-height: 1.227;
+}
+
+.reception-consume {
+    margin-top: 1rem;
+    padding: 0px .5rem .5rem;
+    position: relative;
+}
+
+.reception-consume .consume-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reception-consume .consume-item em,
+.reception-consume .consume-item span {
+    font-size: .6rem;
+    font-family: "Microsoft YaHei";
+    color: black;
+    text-align: left;
+    font-weight: 400;
+}
+
+.reception-consume .consume-item .color {
+    color: red;
+}
+
+.reception-consume .consume-item .fontSize {
+    font-size: 1rem;
+}
+
+.reception-consume .consume-item .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column;
+}
+
+.reception-consume .consume-item .other-play {
+    flex-direction: row;
+    align-items: center;
+}
+
+.reception-consume .other-flex {
+    align-items: flex-start;
+}
+
+.reception-consume>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.96rem;
+    height: 1.34rem;
+    background-color: #0F4279;
+    border-radius: .2rem;
+    position: absolute;
+    right: .6rem;
+    top: .6rem;
+    color: #fff;
+    font-size: .65rem;
+    font-family: "Microsoft YaHei";
+    line-height: 1.2;
+}
+
+input[type="text"] {
+    border: 1px solid #000;
+}
+
+input[type="button"] {
+    border: 1px solid #000;
+    width: 200px;
+}
+
+.tabColumn {
+    margin: 60px auto;
+}
+
+.tabColumn span {
+    background-color: #eee;
+    padding: 30px;
+}
+
+.tabColumn span:nth-of-type(1) {
+    color: #fff;
+    background-color: #000;
+}
