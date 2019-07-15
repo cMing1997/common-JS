@@ -6,7 +6,7 @@
 #### 插件列表 
  - [emoji集成](https://github.com/star-Ming/common-JS/tree/master/emojs.js)
 
-  <img src="./emoji.js/emojiGif.gif" />
+  <img src="https://github.com/CasualMing/common-JS/blob/master/emojs.js/emojiGif.gif" />
 
  - <a href="https://github.com/star-Ming/common-JS/tree/master/3D%E8%BD%AE%E6%92%AD%E5%9B%BE" target="_blank">3D左右轮播图</a>
  
