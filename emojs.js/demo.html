@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>emojs.js demo</title>
+    <link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css">
+    <!-- <script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script> -->
+    <!-- <script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script> -->
+    <script src="./emoji.js"></script>
+    <style type="text/css">
+        .emojiOne {
+            width: 500px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .data-input {
+            display: inline-block;
+            vertical-align: top;
+            width: 800px;
+            height: 40px;
+            border: 1px solid red;
+        }
+
+        img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="emojiOne"></div>
+    <div class="data-input" contenteditable="true"></div>
+    <script>
+        window.onload = function () {
+            let str =
+                "😠😩😲😞😵😰😒😍😤😜😝😋😘😚😷😳😃😅😆😁😂😊☺😄😢😭😨😣😡😌😖😔😱😪😏😓😥😫😉🐽👬👭🌲🌳🍋😎😀☀☁☔⛄⚡🌀🌁🌂🌃🌄🌅🌆🌇🌈❄⛅🌉🌊🌋🌌🌏🌑🌔🌓🌙🌕🌛🌟🌠🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛⌚⌛⏰⏳♈♉♊♋♌♍♎♏♐♑♒♓⛎🍀🌷🌱🍁🌸🌹🍂🍃🌺🌻🌴🌵🌾🌽🍄🌰🌼🌿🍒🍌🍎🍊🍓🍉🍅🍆🍈🍍🍇🍑🍏👀👂👃👄👅💄💅💆💇💈👤👦👧👨👩👪👫👮👯👰👱👲👳👴👵👶👷👸👹👺👻👼👽👾👿💀💁💂💃🐌🐍🐎🐔🐗🐫🐘🐨🐒🐑🐙🐚🐛🐜🐝🐞🐠🐡🐢🐤🐥🐦🐣🐧🐩🐟🐬🐭🐯🐱🐳🐴🐵🐶🐷🐻🐹🐺🐮🐰🐸🐾🐲🐼😺😸😹😽😻😿😾😼🙀🙅🙆🙇🙈🙊🙉🙋🙌🙍🙎🙏🏠🏡🏢🏣🏥🏦🏧🏨🏩🏪🏫⛪⛲🏬🏯🏰🏭⚓🏮🗻🗼🗽🗾🗿👞👟👠👡👢👣👓👕👖👑👔👒👗👘👙👚👛👜👝💰💱💹💲💳💴💵💸🇨🇳🇩🇪🇪🇸🇫🇷🇬🇧🇮🇹🇯🇵🇰🇷🇷🇺🇺🇸🔥🔦🔧🔨🔩🔪🔫🔮🔯🔰🔱💉💊🅰🅱🆎🅾🎀🎁🎂🎄🎅🎌🎆🎈🎉🎍🎎🎓🎒🎏🎇🎐🎃🎊🎋🎑📟☎📞📱📲📝📠✉📨📩📪📫📮📰📢📣📡📤📥📦📧🔠🔡🔢🔣🔤✒💺💻✏📎💼💽💾💿📀✂📍📃📄📅📁📂📓📖📔📕📗📘📙📚📛📜📋📆📊📈📉📇📌📒📏📐📑🎽⚾⛳🎾⚽🎿🏀🏁🏂🏃🏄🏆🏈🏊🚃🚇Ⓜ🚄🚅🚗🚙🚌🚏🚢✈⛵🚉🚀🚤🚕🚚🚒🚑🚓⛽🅿🚥🚧🚨♨⛺🎠🎡🎢🎣🎤🎥🎦🎧🎨🎩🎪🎫🎬🎭🎮🀄🎯🎰🎱🎲🎳🎴🃏🎵🎶🎷🎸🎹🎺🎻🎼〽📷📹📺📻📼💋💌💍💎💏💐💑💒🔞©®™ℹ#⃣1⃣2⃣3⃣4⃣5⃣6⃣7⃣8⃣9⃣0⃣🔟📶📳📴🍔🍙🍰🍜🍞🍳🍦🍟🍡🍘🍚🍝🍛🍢🍣🍱🍲🍧🍖🍥🍠🍕🍗🍨🍩🍪🍫🍬🍭🍮🍯🍤🍴☕🍸🍺🍵🍶🍷🍻🍹↗↘↖↙⤴⤵↔↕⬆⬇➡⬅▶◀⏩⏪⏫⏬🔺🔻🔼🔽⭕❌❎❗⁉‼❓❔❕〰➰➿❤💓💔💕💖💗💘💙💚💛💜💝💞💟♥♠♦♣🚬🚭♿🚩⚠⛔♻🚲🚶🚹🚺🛀🚻🚽🚾🚼🚪🚫✔🆑🆒🆓🆔🆕🆖🆗🆘🆙🆚🈁🈂🈲🈳🈴🈵🈶🈚🈷🈸🈹🈯🈺㊙㊗🉐🉑➕➖✖➗💠💡💢💣💤💥💦💧💨💩💪💫💬✨✴✳⚪⚫🔴🔵🔲🔳⭐⬜⬛▫▪◽◾◻◼🔶🔷🔸🔹❇💮💯↩↪🔃🔊🔋🔌🔍🔎🔒🔓🔏🔐🔑🔔☑🔘🔖🔗🔙🔚🔛🔜🔝✅✊✋✌👊👍☝👆👇👈👉👋👏👌👎👐"
+            // 将生成的表情展现在页面上
+            document.querySelector(".emojiOne").innerHTML = jEmoji.unifiedToHTML(str)
+            // 获取输入框元素
+            let editEle = document.querySelector(".data-input");
+            // 获取所有的表情元素
+            let spans = document.querySelectorAll(".emoji");
+            // 定义最后光标对象
+            var lastEditRange;
+            // 编辑框按键弹起事件
+            editEle.onkeyup = function () {
+                // 获取选定对象
+                var selection = getSelection();
+                // 设置最后光标对象
+                lastEditRange = selection.getRangeAt(0);
+            };
+            editEle.onkeydown = function (e) {
+                console.log(e)
+            }
+            // 监听编辑框点击事件
+            editEle.onclick = function (e) {
+                let focusDomClassList = Array.prototype.slice.call(e.target.classList);
+                this.focus();
+                // 获取选定对象
+                var selection = window.getSelection();
+                // 设置最后光标对象
+                lastEditRange = selection.getRangeAt(0);
+                // 循环为表情元素注册点击事件;
+                for (let index = 0; index < spans.length; index++) {
+                    const element = spans[index];
+                    element.onclick = function (e) {
+                        let targetDOM = e.target.outerHTML;
+                        _insertimg(targetDOM)
+                    }
+                }
+            }
+            // 元素插入
+            function _insertimg(str) {
+                var selection = window.getSelection ? window.getSelection() : document.selection;
+                document.querySelector(".data-input").focus();
+                if (lastEditRange) {
+                    // 存在最后光标对象，选定对象清除所有光标并添加最后光标还原之前的状态
+                    selection.removeAllRanges()
+                    selection.addRange(lastEditRange)
+                }
+                var range = selection.createRange ? selection.createRange() : selection.getRangeAt(0);
+                if (!window.getSelection) {
+                    var selection = window.getSelection ? window.getSelection() : document.selection;
+                    var range = selection.createRange ? selection.createRange() : selection.getRangeAt(0);
+                    range.pasteHTML(str);
+                    range.collapse(false);
+                    range.select();
+                } else {
+                    var hasR = range.createContextualFragment(str);
+                    var hasR_lastChild = hasR.lastChild;
+                    while (hasR_lastChild && hasR_lastChild.nodeName.toLowerCase() == "br" && hasR_lastChild
+                        .previousSibling && hasR_lastChild.previousSibling.nodeName.toLowerCase() == "br") {
+                        var e = hasR_lastChild;
+                        hasR_lastChild = hasR_lastChild.previousSibling;
+                        hasR.removeChild(e)
+                    }
+                    range.insertNode(hasR);
+                    if (hasR_lastChild) {
+                        range.setEndAfter(hasR_lastChild);
+                        range.setStartAfter(hasR_lastChild);
+                    }
+                    range.collapse(false);
+                    selection.removeAllRanges();
+                    selection.addRange(range)
+                }
+                // 无论如何都要记录最后光标对象
+                lastEditRange = selection.getRangeAt(0)
+            }
+        }
+    </script>
+</body>
+
+
+</html>
