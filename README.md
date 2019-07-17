@@ -20,6 +20,102 @@
 
 <img src="./简单分页/img/pagination.gif"/>
 
+- **用于光标处插入**
+```javascript
+    let lastEditRange;// 最后的光标对象
+    // 编辑框按键弹起事件
+    editEle.onkeyup = function () {
+        // 获取选定对象
+        var selection = getSelection();
+        // 设置最后光标对象
+        lastEditRange = selection.getRangeAt(0);
+    };
+    editEle.onkeydown=function(e){
+        console.log(e)
+    }
+    // 监听编辑框点击事件
+    editEle.onclick = function (e) {
+        // ......
+    }
+    // 元素插入
+    function _insertimg(str) {
+        var selection = window.getSelection ? window.getSelection() : document.selection;
+        document.querySelector(".data-input").focus();
+        if (lastEditRange) {
+            // 存在最后光标对象，选定对象清除所有光标并添加最后光标还原之前的状态
+            selection.removeAllRanges()
+            selection.addRange(lastEditRange)
+        }
+        var range = selection.createRange ? selection.createRange() : selection.getRangeAt(0);
+        if (!window.getSelection) {
+            var selection = window.getSelection ? window.getSelection() : document.selection;
+            var range = selection.createRange ? selection.createRange() : selection.getRangeAt(0);
+            range.pasteHTML(str);
+            range.collapse(false);
+            range.select();
+        } else {
+            var hasR = range.createContextualFragment(str);
+            var hasR_lastChild = hasR.lastChild;
+            while (hasR_lastChild && hasR_lastChild.nodeName.toLowerCase() == "br" && hasR_lastChild
+                .previousSibling && hasR_lastChild.previousSibling.nodeName.toLowerCase() == "br") {
+                var e = hasR_lastChild;
+                hasR_lastChild = hasR_lastChild.previousSibling;
+                hasR.removeChild(e)
+            }
+            range.insertNode(hasR);
+            if (hasR_lastChild) {
+                range.setEndAfter(hasR_lastChild);
+                range.setStartAfter(hasR_lastChild);
+            }
+            range.collapse(false);
+            selection.removeAllRanges();
+            selection.addRange(range)
+        }
+        // 无论如何都要记录最后光标对象
+        lastEditRange = selection.getRangeAt(0)
+    }
+```
+
+
+- **无限滚动**
+
+```html
+ <!--dom结构 -->
+    <div class="out-box">
+        <div class="reservedHeight">
+            <div class="original">
+                <!-- .... 这里放原始数据 -->
+            </div>
+            <div class="clone"></div>
+        </div>
+    </div>
+```
+> JS代码如下
+
+ ```javascript
+         //	speed 可自行设置文字滚动的速度
+        function textScroll(speed = 80) {
+            var wrapper = document.querySelector(".reservedHeight");
+            var demo1 = document.querySelector(".original");
+            var demo2 = document.querySelector(".clone");
+            demo2.innerHTML = demo1.innerHTML //克隆demo1为demo2  
+            function Marquee() {
+                if (demo2.offsetHeight - wrapper.scrollTop <= 0) //当滚动至demo1与demo2交界时  
+                    wrapper.scrollTop -= demo1.offsetHeight //demo跳到最顶端  
+                else {
+                    wrapper.scrollTop++ //如果是横向的 将 所有的 height top 改成 width left  
+                }
+            }
+            var MyMar = setInterval(Marquee, speed) //设置定时器  
+            wrapper.onmouseover = function () {
+                clearInterval(MyMar)
+            } //鼠标移上时清除定时器达到滚动停止的目的  
+            wrapper.onmouseout = function () {
+                MyMar = setInterval(Marquee, speed)
+            } //鼠标移开时重设定时器 
+        };
+ ```
+
 
  - **回到顶部（带动画）**
  

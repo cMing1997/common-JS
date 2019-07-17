@@ -46,7 +46,8 @@
   position: relative;
 }
 
-.carousel-btn-left, .carousel-btn-right {
+.carousel-btn-left,
+.carousel-btn-right {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);

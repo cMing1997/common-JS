@@ -1,7 +1,5 @@
 window.onload = function (params) {
     (function (params) {
-        //初始化样式    
-        document.querySelector(".carousel-map").style.height = document.querySelector(".active").clientHeight + 1 + "px";
         const getDom = function (dom) {
             if (typeof dom != "string") return;
             return document.querySelector(dom);
@@ -10,6 +8,12 @@ window.onload = function (params) {
             if (typeof dom != "string") return;
             return document.querySelectorAll(dom)
         }
+        //初始化样式
+        getAllDom(".carousel-img")[0].classList.add("previous");
+        getAllDom(".carousel-img")[1].classList.add("active");
+        getAllDom(".carousel-img")[2].classList.add("next");
+        getDom(".carousel-map").style.height = getDom(".active").clientHeight + 1 + "px";
+
         let rotateFn = function (params) {
             if (!getDom(".next").nextElementSibling) {
                 getDom(".carousel-img").classList.add("next");
