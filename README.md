@@ -331,7 +331,7 @@
                 // 天
                 day = Math.floor(leftTime / 1000 / 60 / 60 / 24);
                 if (options.isTenSeparate) {
-                    getDom(options.timeDayTen).textContent = FillInNum(day).ten + FillInNum(day).one;
+                    getDom(options.timeDayTen).textContent = day;
                 } else {
                     getDom(options.timeDayTen).textContent = FillInNum(day).ten;
                     getDom(options.timeDayOne).textContent = FillInNum(day).one;
@@ -339,7 +339,7 @@
                 // 时
                 hour = Math.floor(leftTime / 1000 / 60 / 60 % 24);
                 if (options.isTenSeparate) {
-                    getDom(options.timeHourTen).textContent = FillInNum(day).ten + FillInNum(day).one;
+                    getDom(options.timeHourTen).textContent = hour;
                 } else {
                     getDom(options.timeHourTen).textContent = FillInNum(hour).ten;
                     getDom(options.timeHourOne).textContent = FillInNum(hour).one;
@@ -347,7 +347,7 @@
                 // 分
                 min = Math.floor(leftTime / 1000 / 60 % 60);
                 if (options.isTenSeparate) {
-                    getDom(options.timeMinuteTen).textContent = FillInNum(day).ten + FillInNum(day).one;
+                    getDom(options.timeMinuteTen).textContent = min;
                 } else {
                     getDom(options.timeMinuteTen).textContent = FillInNum(min).ten;
                     getDom(options.timeMinuteOne).textContent = FillInNum(min).one;
@@ -355,7 +355,7 @@
                 // 秒
                 second = Math.floor(leftTime / 1000 % 60);
                 if (options.isTenSeparate) {
-                    getDom(options.timeSecondTen).textContent = FillInNum(day).ten + FillInNum(day).one;
+                    getDom(options.timeSecondTen).textContent = second;
                 } else {
                     getDom(options.timeSecondTen).textContent = FillInNum(second).ten;
                     getDom(options.timeSecondOne).textContent = FillInNum(second).one;
